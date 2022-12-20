@@ -1,10 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
-    int arrangeCoins(int n) {
-        int ans = 0;
-        while((ans+1)*1LL*(ans+2)<=(long long)n*2){
-            ans++;
-        }
-        return ans;
-    }
+   int arrangeCoins(int n) {
+      return (sqrt(8*(long long)n+1)-1)/2;
+   }
 };
+main(){
+   Solution ob;
+   cout << (ob.arrangeCoins(13));
+}
